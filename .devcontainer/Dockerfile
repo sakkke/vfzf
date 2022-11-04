@@ -16,5 +16,6 @@ RUN mkdir /opt/v \
         && git fetch --depth=1 origin 54b623743d12306aac8d0091daf3149299d5fe9e \
         && git reset --hard FETCH_HEAD \
         && make \
-        && ./v symlink)
+        && ./v symlink \
+		&& chown -R 1000:1000 .)
 
