@@ -2,7 +2,7 @@
 [![](https://img.shields.io/github/license/sakkke/vfzf?style=for-the-badge)](https://github.com/sakkke/vfzf/blob/main/LICENSE)
 [![](https://img.shields.io/badge/VPM-sakkke.vfzf-5D87BF?style=for-the-badge)](https://vpm.vlang.io/mod/sakkke.vfzf)
 
-V wrapper for [fzf].
+A V wrapper for [fzf].
 This is a V port of [pyfzf].
 
 ## Requirements
@@ -19,7 +19,7 @@ v install sakkke.vfzf
 ## Usage
 
 ```v
-import vfzf { new_fzf_prompt }
+import sakkke.vfzf { new_fzf_prompt }
 fzf := new_fzf_prompt()
 ```
 
