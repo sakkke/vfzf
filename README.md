@@ -7,7 +7,7 @@ This is a V port of [pyfzf].
 
 ## Requirements
 
-- V
+- [V](https://github.com/vlang/v)
 - [fzf]
 
 ## Installation
