@@ -24,7 +24,7 @@ pub struct FzfPromptPromptConfig {
 
 pub fn new_fzf_prompt(c FzfPromptConfig) &FzfPrompt {
 	if c.executable_path == 'fzf' && !os.exists_in_system_path('fzf') {
-		panic('Cannot find fzf installed on PATH. $fzf_url')
+		panic('Cannot find \'fzf\' installed on PATH. ($fzf_url)')
 	}
 
 	return &FzfPrompt{
