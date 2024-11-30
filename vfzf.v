@@ -7,7 +7,8 @@ import os
 const fzf_url = 'https://github.com/junegunn/fzf'
 
 pub struct FzfPromptConfig {
-pub: executable_path string = 'fzf'
+pub:
+	executable_path string = 'fzf'
 }
 
 pub struct FzfPrompt {
@@ -16,14 +17,14 @@ pub struct FzfPrompt {
 
 pub struct FzfPromptPromptConfig {
 pub:
-    choices      []string
-    fzf_options  string
-    delimiter    string
+	choices     []string
+	fzf_options string
+	delimiter   string
 }
 
 pub fn new_fzf_prompt(c FzfPromptConfig) &FzfPrompt {
 	if c.executable_path == 'fzf' && !os.exists_in_system_path('fzf') {
-		panic('Cannot find \'fzf\' installed on PATH. ($fzf_url)')
+		panic('Cannot find \'fzf\' installed on PATH. (${fzf_url})')
 	}
 
 	return &FzfPrompt{
@@ -43,7 +44,7 @@ pub fn (f FzfPrompt) prompt(c FzfPromptPromptConfig) []string {
 	os.write_file(input_file, choices_str) or { panic(err) }
 
 	// Invoke fzf externally and write to output file
-	os.system('$f.executable_path $c.fzf_options < "$input_file" > "$output_file"')
+	os.system('${f.executable_path} ${c.fzf_options} < "${input_file}" > "${output_file}"')
 
 	// Get selected options
 	selection := os.read_lines(output_file) or { panic(err) }
