@@ -18,8 +18,8 @@ pub struct FzfPrompt {
 pub struct FzfPromptPromptConfig {
 pub:
 	choices     []string
-	fzf_options string
-	delimiter   string
+	fzf_options string = ''
+	delimiter   string = '\n'
 }
 
 pub fn new_fzf_prompt(c FzfPromptConfig) &FzfPrompt {
