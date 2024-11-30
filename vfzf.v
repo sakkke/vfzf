@@ -18,7 +18,7 @@ pub struct FzfPrompt {
 pub struct FzfPromptPromptConfig {
 pub:
 	choices     []string
-	fzf_options string = ''
+	fzf_options string
 	delimiter   string = '\n'
 }
 
