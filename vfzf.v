@@ -6,8 +6,8 @@ import os
 // Constants
 const fzf_url = 'https://github.com/junegunn/fzf'
 
-[params]
 pub struct FzfPromptConfig {
+pub:
 	executable_path string = 'fzf'
 }
 
@@ -15,8 +15,8 @@ pub struct FzfPrompt {
 	executable_path string
 }
 
-[params]
 pub struct FzfPromptPromptConfig {
+pub:
 	choices []string
 	fzf_options string
 	delimiter string = '\n'
